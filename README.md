@@ -16,9 +16,9 @@ To code like this:
 var _map = require('lodash-node/modern/collections/map');
 var _each = require('lodash-node/modern/collections/forEach');
 var _pluck = require('lodash-node/modern/collections/map');
-_.each(/* ... code ... */);
-_.map(/* ... code ... */);
-_.pluck(/* ... code ... */);
+_each(/* ... code ... */);
+_map(/* ... code ... */);
+_pluck(/* ... code ... */);
 ```
 
 This module helps you do that. Give it a file and it will find what lodash methods you are using (using [lodash-finder](https://github.com/spadgos/lodash-finder)) and then write another version of you file with only the methods you need.
