@@ -1,5 +1,4 @@
 lodash-replacer
-<<<<<<< HEAD
 ==============
 
 [lodash-node](http://lodash.com/custom-builds) is amazing. I recently converted a bunch of small projects from code like this:
@@ -44,8 +43,3 @@ This module is pretty naive at the moment. It uses regex. It fit my use case sin
 - Use AST parsing
 - Add option to recursively walk a directory and replace in all files
 - Add option to replace file inline
-=======
-===============
-
-A helper to replace calls to lodash functions with the individual methods.
->>>>>>> e669854... Initial commit
