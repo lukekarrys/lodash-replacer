@@ -1,7 +1,7 @@
 lodash-replacer
 ==============
 
-[lodash-node](http://lodash.com/custom-builds) is amazing. I recently converted a bunch of small projects from code like this:
+[lodash-node](https://github.com/lodash/lodash-node) is amazing. I recently converted a bunch of small projects from code like this:
 
 ``` js
 var _ = require('lodash');
@@ -21,7 +21,7 @@ _map(/* ... code ... */);
 _pluck(/* ... code ... */);
 ```
 
-This module helps you do that. Give it a file and it will find what lodash methods you are using (using [lodash-finder](https://github.com/spadgos/lodash-finder)) and then write another version of you file with only the methods you need.
+This module helps you do that. Give it a file and it will find what lodash methods you are using (using [lodash-finder](https://github.com/spadgos/lodash-finder)) and then write another version of your file with only the methods you need.
 
 ## Usage
 
@@ -32,7 +32,7 @@ This module helps you do that. Give it a file and it will find what lodash metho
 ## API
 
 - `-f, --file` The file to run lodash-replacer on
-- `-t, --type` The type of individual lodash module you want: modern, comapt or underscore
+- `-t, --type` The type of individual lodash modules you want: `modern`, `comapt` or `underscore`
 
 ### Warning
 

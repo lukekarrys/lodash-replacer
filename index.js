@@ -47,7 +47,7 @@ files.forEach(function (file) {
     fileString = fileString.replace(new RegExp("var _ = require\\('lodash-node'\\);\n", 'g'), '');
 
     output.push('');
-    fs.writeFileSync(path.resolve(dirname, '_' + filename + '.js'), output.join('\n') + fileString);
+    fs.writeFileSync(path.resolve(dirname, filename + '__LODASH-REPLACER.js'), output.join('\n') + fileString);
 
     console.log();
     console.log(file);

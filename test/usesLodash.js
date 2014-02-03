@@ -9,6 +9,6 @@ _.each(mappedRange, function (r, i) {
     mappedRange[i] = r + 1000;
 });
 
-var x = _.pluck({}, 'x');
+var x = _.pluck([{x: 1}, {x: 2}], 'x');
 
-module.exports = mappedRange;
+module.exports = {ranged: mappedRange, plucked: x};
