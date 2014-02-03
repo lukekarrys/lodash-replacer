@@ -33,6 +33,7 @@ This module helps you do that. Give it a file and it will find what lodash metho
 
 - `-f, --file` The file to run lodash-replacer on
 - `-t, --type` The type of individual lodash modules you want: `modern`, `comapt` or `underscore`
+- `-v, --verbose` Log output during replacing
 
 ### Warning
 

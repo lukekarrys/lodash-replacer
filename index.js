@@ -5,6 +5,7 @@ program
   .version(modulePackage.version)
   .option('-t, --type [type]', 'The type of lodash module you are using: compat, modern or underscore', String, 'modern')
   .option('-f --file [file]', 'The file to read and replace', String, '')
+  .option('-v --verbose', 'Turn on logging', Boolean, false)
   .parse(process.argv);
 
 if (!program.file) throw new Error('You must specify a file');
@@ -49,8 +50,10 @@ files.forEach(function (file) {
     output.push('');
     fs.writeFileSync(path.resolve(dirname, filename + '__LODASH-REPLACER.js'), output.join('\n') + fileString);
 
-    console.log();
-    console.log(file);
-    console.log('----------------');
-    console.log('The following methods were replaced: ' + methods.join(', '));
+    if (program.verbose) {
+        console.log();
+        console.log(file);
+        console.log('----------------');
+        console.log('The following methods were replaced: ' + methods.join(', '));
+    }
 });
