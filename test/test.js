@@ -1,3 +1,5 @@
+/* globals describe, it */
+
 var before = require('./usesLodash');
 var after = require('./usesLodash__LODASH-REPLACER');
 var assert = require('assert');

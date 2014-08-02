@@ -8,7 +8,9 @@ program
   .option('-v --verbose', 'Turn on logging', Boolean, false)
   .parse(process.argv);
 
-if (!program.file) throw new Error('You must specify a file');
+if (!program.file) {
+    throw new Error('You must specify a file');
+}
 
 var files = [program.file];
 var finder = require('./node_modules/lodash-finder/lib/lodash-finder.js');
@@ -42,10 +44,10 @@ files.forEach(function (file) {
                 output.push('var _' + method + ' = require(\'lodash-node/' + type + '/' + group + '/' + (groupFns[method].name || method) + '\');');
             }
         }
-        fileString = fileString.replace(new RegExp('_\.' + method + '\\(', 'g'), '_' + method + '(');
+        fileString = fileString.replace(new RegExp('_.' + method + '\\(', 'g'), '_' + method + '(');
     }
 
-    fileString = fileString.replace(new RegExp("var _ = require\\('lodash-node'\\);\n", 'g'), '');
+    fileString = fileString.replace(new RegExp('var _ = require\\(\'lodash-node\'\\);\n', 'g'), '');
 
     output.push('');
     fs.writeFileSync(path.resolve(dirname, filename + '__LODASH-REPLACER.js'), output.join('\n') + fileString);
