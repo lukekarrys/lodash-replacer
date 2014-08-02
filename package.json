@@ -1,7 +1,7 @@
 {
   "name": "lodash-replacer",
   "description": "A helper to replace calls to lodash functions with the individual methods.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": {
     "name": "Luke Karrys",
     "email": "luke@lukekarrys.com",
