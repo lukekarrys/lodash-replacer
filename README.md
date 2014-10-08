@@ -1,6 +1,9 @@
 lodash-replacer
 ==============
 
+[![NPM](https://nodei.co/npm/lodash-replacer.png)](https://nodei.co/npm/lodash-replacer/)
+[![Build Status](https://travis-ci.org/lukekarrys/lodash-replacer.png?branch=master)](https://travis-ci.org/lukekarrys/lodash-replacer)
+
 [lodash-node](https://github.com/lodash/lodash-node) is amazing. I recently converted a bunch of small projects from code like this:
 
 ``` js
